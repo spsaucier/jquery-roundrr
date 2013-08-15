@@ -49,6 +49,7 @@
 		initialScale: 1,
 		angleOffset: 0, // in radians
 		centerImageSrc: 'images/placeholder2.png',
+		centerText: null,
 		centerX: 0,
 		centerY: 0, 
 		requiredLeftA:'-55.1904px', // override for positioning: main image n-1's left position
@@ -108,8 +109,8 @@
 		var o = $.extend({}, defaults, opts);
 		
 		//inner-wrap the center class
-		
-		jQuery('.' + o.centerClass).wrapInner("<img class='centerImage' src='" + o.centerImageSrc + "'></img>");
+		if (o.centerImageSrc) jQuery('.' + o.centerClass).wrapInner("<img class='centerImage' src='" + o.centerImageSrc + "'></img>");
+		if (o.centerText) jQuery('.' + o.centerClass).html(o.centerText);
 	
 		return $menu.each(function(m){
 			var $this = $(this);

@@ -1,124 +1,56 @@
 /* jQuery Roundrr CSS Stylesheet 1.0 */
-
 body {
-	margin: 0 auto;
-	text-align: center;
-	position: relative;
-	width: 950px;
-	background-color: black;
-	background-image: url("../images/tile1.jpg");
+	background: #ddd;
+	font-family: Helvetica Neue, 'Helvetica Neue', Helvetica, 'Helvetica', Calibri, Arial, sans-serif;
 }
-
-a {
-	color: white
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-#next {
-	border-width: 0px;
-	background-image: url(../images/btn2.png);
-	height: 38px;
-	width: 112px;
-	display: block;
+#roundrr_navigation a {
+	text-decoration: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 54%;
+	bottom: 0;
+	font-size: 30px;
+	line-height: 30px;
+	margin-top: auto;
 }
-
-#prev {
-	border-width: 0px;
-	background-image: url(../images/btn.png);
-	height: 38px;
-	width: 112px;
-	display: block;
-	margin-top: 5px;
-}
+#next {left: auto!important;}
+#prev {right: auto!important;}
 
 .container {
-	margin-top: 100px;
 	position: relative;
-	height: 600px
 }
-
-.my_class {
-	font-size: 1.5em;
-	color: #abc;
-	background-color: #ffffff;
-	border: 2px solid white;
-}
-
-.my_class:hover {
-	border: 2px solid #ccc;
-}
-
-.my_class img {
-	height: 48px;
-	width: 48px;
-}
-
-#roundrr_navigation {
-	position: absolute;
-	top: 105px;
-	z-index: 500;
-	width: 200px;
-	height: 100px;
-	left: 750px;
-}
-
-#roundrr_navigation p{
-color:white;
-font-family:Arial;
-font-size:12px;
-margin-left:-9px;
-margin-top:-40px;
-width:145px;
-
-}
-
-.centerImage {
-	width: 180px;
-}
-
-.roundrr_center {
-	background-color: transparent;
-	height: 160px;
+#roundrr_frame_selected {
+	height: 90px;
 	margin-bottom: 0;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	top: 100px;
-	width: 195px;
-}
-
-.roundrr_speech {
-	background-color: transparent;
-	background-image: url("../images/speech.png");
-	height: 62px;
-	left: -6px;
-	margin-bottom: 0;
-	margin-left: 41%;
+	margin-left: -49px;
 	margin-right: auto;
 	position: absolute;
-	top: 30px;
-	width: 180px;
+	width: 94px;
+	z-index: 0;
+	top: 90px;
+	background: #333;
+	left: 50%;
+}
+
+#roundrr_container {
+	position: relative;
+	width: 1000px;
+	height: 660px;
+	text-align: center;
+	margin: 0 auto;
+}
+#roundrr_container .list {
 	display: none;
 }
-
-#roundrr_pick {
-	background-image: url(../images/pick4.png);
-	height: 105px;
-	margin-bottom: 0;
-	margin-left: 45%;
-	margin-right: auto;
-	position: absolute;
-	top: -81px;
-	width: 94px;
-	z-index: 500;
-}
-
-.keyboard{
-
-    margin-left:-78px;
-}
-
 #roundrr_caption {
-	color: white;
+	color: #333;
 	font-size: 27px;
 	height: 22px;
 	left: -2px;
@@ -127,39 +59,51 @@ width:145px;
 	margin-left: 42%;
 	margin-right: auto;
 	position: absolute;
-	top: 54px;
+	top: 218px;
 	width: 155px;
 	z-index: 500;
-	/*comment out the following to disable @font-face use*/
-font-family: 'TradeGothicLTStdBoldCondensed', sans-serif;
 }
 
-#roundrr_container, #roundrr_container2 {
-	position: relative;
-	left: -45px;
-	top: -120px;
-	width: 100px;
-	height: auto;
-	text-align: center;
-	margin: 0 auto;
+.roundrr_center {
+	background-color: transparent;
+	height: 160px;
+	position: absolute;
+	top: 280px;
+	left: 50%;
+	margin-left: -98px;
+	width: 196px;
+}
+.centerImage {
+	width: 180px;
 }
 
+.roundrr_div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	margin-top: -98px;
+	margin-left: -44px;
+}
 .roundrr_div_item {
-	background-color: none;
-	height: 50px;
-	padding: 40px;
-	color: #234;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+	background: #fff;
 	cursor: pointer;
+	width: 84px;
+	height: 84px;
+	padding: 8px;
+	border: 1px solid #fff;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
 }
-
-
-.selected{
-
-background-color:red;
-border:2px solid red;
-color:#AABBCC;
-font-size:1.5em;
-
+.roundrr_div_item.active {
+	border: 1px solid #ccc;
 }
+.roundrr_thumb img {
+	width: 66px;
+	height: 66px;
+	text-align: center;
+	max-width: 100%;
+}
+.roundrr_thumb img.selected{}
